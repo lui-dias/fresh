@@ -121,9 +121,9 @@ export function renderOuterDocument(
         : null,
       docTitle,
       docHeadNodes.map((node) => h(node.type, node.props)),
-      opts.preloads.map((src) =>
-        h("link", { rel: "modulepreload", href: withBase(src, state.basePath) })
-      ),
+      //   opts.preloads.map((src) =>
+      //     h("link", { rel: "modulepreload", href: withBase(src, state.basePath) })
+      //   ),
       opts.moduleScripts.map(([src, nonce]) =>
         h("script", {
           src: withBase(src, state.basePath),
